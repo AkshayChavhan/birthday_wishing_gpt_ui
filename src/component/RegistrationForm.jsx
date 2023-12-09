@@ -40,7 +40,7 @@ function RegistrationForm() {
         fullname,
         emailId,
       };
-      
+
       localStorage.setItem("userList", JSON.stringify([...userList, newUser]));
 
       setOpen(true);
@@ -133,7 +133,7 @@ function RegistrationForm() {
 
           <button
             type="submit"
-            className="bg-yellow-500 py-3 text-white font-extrabold rounded-2xl mx-20"
+            className="bg-yellow-500 py-3 my-10 text-white font-extrabold rounded-2xl mx-20"
             style={{
               maxWidth: "109px",
               alignSelf: "center",
@@ -144,15 +144,22 @@ function RegistrationForm() {
           </button>
         </form>
         <div className="absolute left-0 right-0">
-          <div className="absolute left-0">
-            <img src={"/2_Asset 1.png"} alt="glitter" width={80} height={80} />
+          <div
+            className="absolute left-0"
+            style={{
+              left: "25px",
+              bottom: "19px",
+            }}
+          >
+            <img src={"/2_Asset 1.png"} alt="glitter" width={'40px'} height={'40px'} />
           </div>
-          <div className="absolute right-10 -top-50">
+          <div className="absolute right-10 -top-50"
+          style={{bottom: '27px'}}>
             <img
               src={"/2_Yellow tone.png"}
               alt="music"
-              width={25}
-              height={25}
+              width={'20px'}
+              height={'20px'}
             />
           </div>
         </div>

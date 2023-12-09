@@ -3,7 +3,7 @@ import React from "react";
 function Header({ progress = "" }) {
   return (
     <>
-      <div className="bg-[#42006dc4] h-[100px] flex justify-between items-center p-2">
+      <div className="bg-[#42006dc4] h-[70px] flex justify-between items-center p-2">
         <div className="flex items-center">
           <div>
             <img

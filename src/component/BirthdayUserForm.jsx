@@ -104,13 +104,13 @@ function BirthdayUserForm() {
           <div className="absolute left-0 right-0">
             <div
               className="absolute left-0"
-              style={{ bottom: "-440px", left: "64px" }}
+              style={{ top: "285px", left: "50px" }}
             >
               <img
                 src={"/2_Purple tone.png"}
                 alt="music"
-                width={50}
-                height={50}
+                width={30}
+                height={30}
               />
             </div>
           </div>
