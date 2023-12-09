@@ -85,8 +85,12 @@ function RegistrationForm() {
         />
 
         <form className="flex flex-col" onSubmit={handleSubmitForm}>
-          <h2 className="text-center text-white text-xl font-bold"
-          style={{padding: '0px 0px 3px 0px'}}>
+          <h2
+            className="gibson text-center text-white text-xl font-bold"
+            style={{
+              padding: "0px 0px 3px 0px",
+            }}
+          >
             Register to create
           </h2>
           <CustomInput
@@ -112,7 +116,9 @@ function RegistrationForm() {
                 checked={selectedOption1}
                 onChange={handleOptionChange1}
               />
-              <span className="px-3">
+              <span
+                className="px-3 gibson-light"
+              >
                 I accept Terms & Conditions and Privacy Policy of Mondelez
                 (Cadbury)
               </span>
@@ -126,7 +132,9 @@ function RegistrationForm() {
                 onChange={handleOptionChange2}
                 className="bg-white text-gray-500"
               />
-              <span className="px-3">
+              <span
+                className="px-3 gibson-light"
+              >
                 I would like to receive promotional communication from Mondelez
                 (Cadbury) about its products and offers
               </span>
@@ -153,15 +161,19 @@ function RegistrationForm() {
               bottom: "19px",
             }}
           >
-            <img src={"/2_Asset 1.png"} alt="glitter" width={'40px'} height={'40px'} />
+            <img
+              src={"/2_Asset 1.png"}
+              alt="glitter"
+              width={"40px"}
+              height={"40px"}
+            />
           </div>
-          <div className="absolute right-10 -top-50"
-          style={{bottom: '27px'}}>
+          <div className="absolute right-10 -top-50" style={{ bottom: "27px" }}>
             <img
               src={"/2_Yellow tone.png"}
               alt="music"
-              width={'20px'}
-              height={'20px'}
+              width={"20px"}
+              height={"20px"}
             />
           </div>
         </div>

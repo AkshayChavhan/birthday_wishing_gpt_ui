@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'DairyMilkFont-Medium';
+  src: url('./font/DairyMilkFont-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gibson-Bold';
+  src: url('./font/Gibson/Gibson-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gibson-Italic';
+  src: url('./font/Gibson/Gibson-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gibson-Light';
+  src: url('./font/Gibson/Gibson-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url('./font/Gibson/Gibson.ttf') format('truetype');
+}
+
+.gibson {
+  font-family: 'Gibson';
+}
+
+.gibson-light {
+  font-family: 'Gibson-Light';
+}
+
+.gibson-italic {
+  font-family: 'Gibson-Italic';
+}
+
+.gibson-bold {
+  font-family: 'Gibson-Bold';
+}
+
+.dairymilk {
+  font-family: 'DairyMilkFont-Medium';
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

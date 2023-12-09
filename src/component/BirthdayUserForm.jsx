@@ -109,8 +109,8 @@ function BirthdayUserForm() {
               <img
                 src={"/2_Purple tone.png"}
                 alt="music"
-                width={30}
-                height={30}
+                width={20}
+                height={20}
               />
             </div>
           </div>

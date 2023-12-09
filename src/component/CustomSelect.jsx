@@ -14,9 +14,12 @@ function CustomSelect({
       {showLabel && label !== "" ? (
         <div
           className="flex flex-col text-center"
-          style={{ maxWidth: "500px", alignSelf: "center" , width: "375px" }}
+          style={{ maxWidth: "500px", alignSelf: "center", width: "375px" }}
         >
-          <h2 className="text-center text-white text-xl font-bold p-1">
+          <h2
+            className="gibson text-center text-white text-xl font-bold p-1"
+
+          >
             {label}
           </h2>
           <select
