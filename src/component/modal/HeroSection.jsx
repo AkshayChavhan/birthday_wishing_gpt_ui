@@ -10,7 +10,10 @@ function HeroSection({ source = "", alt_name = "", sectionPara }) {
       )}
       {source !== "" && (
         <div className="crop_div self-center">
-          <img className="image_center" src={source} alt={alt_name} />
+          <img className="image_center"
+          height={'100%'}
+          width={'100%'}
+          src={source} alt={alt_name} />
         </div>
       )}
     </div>

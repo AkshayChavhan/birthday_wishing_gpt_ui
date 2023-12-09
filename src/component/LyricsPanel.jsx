@@ -49,7 +49,7 @@ function LyricsPanel() {
         m-10 rounded-3xl p-5 overflow-y-scroll"
         >
           <div className="p-3">
-            <p className=" text-center">{lyrics}</p>
+            <p className=" text-center text-[#42006dc4]">{lyrics}</p>
           </div>
         </div>
       </div>
