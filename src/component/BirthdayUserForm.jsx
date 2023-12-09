@@ -16,7 +16,7 @@ function BirthdayUserForm() {
   } = useMyContext();
   const [birthdayUserName, setBirthdayUserName] = useState("");
   const [birthdayUserAge, setBirthdayUserAge] = useState("");
-  const [selectedGender, setSelectedGender] = useState("");
+  const [selectedGender, setSelectedGender] = useState("male");
 
   const handleSubmitForm = (e) => {
     e.preventDefault();

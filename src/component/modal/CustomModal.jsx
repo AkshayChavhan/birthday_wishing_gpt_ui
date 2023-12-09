@@ -45,7 +45,7 @@ const OtpModal = ({
             <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg place-self-center">
               <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 flex flex-col">
                 <div className="text-center sm:text-left">
-                  <h3 className="text-xl font-extrabold leading-6 text-center text-blue-800">
+                  <h3 className="text-xl font-extrabold leading-6 text-center text-[#272796f7]">
                     Enter OTP
                   </h3>
                   <div className="mt-4 flex justify-center space-x-4">
@@ -59,7 +59,7 @@ const OtpModal = ({
                           handleInputChange(index, e.target.value)
                         }
                         ref={inputRefs[index]}
-                        className="w-12 h-12 border border-gray-300 bg-blue-800 text-white
+                        className="w-12 h-12 border border-gray-300 bg-[#272796f7] text-white
                         rounded-md text-center text-xl font-semibold focus:outline-none focus:border-blue-500
                         items-center"
                       />
@@ -68,17 +68,22 @@ const OtpModal = ({
                 </div>
                 <button
                   type="button"
-                  className="mt-3 mx-5 inline-flex w-full justify-center border-white underline px-3 py-2 text-sm font-semibold border sm:w-auto"
+                  className="justify-end mt-3 inline-flex w-full text-[#272796f7] border-white underline px-3 py-2 text-sm font-semibold border sm:w-auto"
                   onClick={handleResendOtp}
                 >
                   Resend OTP
                 </button>
               </div>
-              <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 justify-center">
+              <div className="bg-gray-50 text-center px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 justify-center">
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center rounded-md bg-yellow-500 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-yellow-200 sm:w-auto"
+                  className="inline-flex w-full justify-center rounded-md bg-yellow-500 px-3 py-2 text-sm font-semibold text-[#272796f7] shadow-sm hover:bg-yellow-200 sm:w-auto"
                   onClick={handleOtpSubmit}
+                  style={{
+                    maxWidth: "109px",
+                    alignSelf: "center",
+                    padding: "9px 29px",
+                  }}
                 >
                   Submit
                 </button>

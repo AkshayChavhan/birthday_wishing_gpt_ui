@@ -16,8 +16,8 @@ function RegistrationForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [fullname, setFullname] = useState("");
   const [emailId, setEmailId] = useState("");
-  const [selectedOption1, setSelectedOption1] = useState(null);
-  const [selectedOption2, setSelectedOption2] = useState(null);
+  const [selectedOption1, setSelectedOption1] = useState(false);
+  const [selectedOption2, setSelectedOption2] = useState(false);
   const [open, setOpen] = useState(false);
   const userList = JSON.parse(localStorage.getItem("userList")) || [];
 
@@ -55,7 +55,7 @@ function RegistrationForm() {
     }
   };
 
-  const handleOptionChange1 = () => {
+  const handleOptionChange1 = (e) => {
     setSelectedOption1(!selectedOption1);
   };
 
@@ -85,7 +85,8 @@ function RegistrationForm() {
         />
 
         <form className="flex flex-col" onSubmit={handleSubmitForm}>
-          <h2 className="text-center text-white text-xl font-bold p-4">
+          <h2 className="text-center text-white text-xl font-bold"
+          style={{padding: '0px 0px 3px 0px'}}>
             Register to create
           </h2>
           <CustomInput
@@ -123,6 +124,7 @@ function RegistrationForm() {
                 name="options2"
                 checked={selectedOption2}
                 onChange={handleOptionChange2}
+                className="bg-white text-gray-500"
               />
               <span className="px-3">
                 I would like to receive promotional communication from Mondelez
@@ -133,7 +135,7 @@ function RegistrationForm() {
 
           <button
             type="submit"
-            className="bg-yellow-500 py-3 my-10 text-white font-extrabold rounded-2xl mx-20"
+            className="bg-yellow-500 py-3 my-10 text-[#42006dc4] font-extrabold rounded-2xl mx-20"
             style={{
               maxWidth: "109px",
               alignSelf: "center",

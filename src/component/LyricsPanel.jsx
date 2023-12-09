@@ -10,11 +10,12 @@ function LyricsPanel() {
   const openai = new OpenAI({ apiKey: import.meta.env.VITE_OPENAI_API_KEY  , dangerouslyAllowBrowser: true });
   const [isLoading, setIsLoading] = useState(true);
   const [lyrics, setLyrics] = useState("");
+  const [status , setStatus] = useState("");
 
   useEffect(() => {
-    // console.log("process.env.=> ", process.env)
     const fetchData = async () => {
       try {
+        setStatus("Your songs lyric's are loading...");
         const prompt = getPrompt(musicType, bname, gender === 'Male' ? 'him' : 'her');
         const response = await openai.chat.completions.create({
           model: 'gpt-3.5-turbo',
@@ -23,8 +24,10 @@ function LyricsPanel() {
 
         const generatedLyrics = response.choices[0]?.message?.content || '';
         setLyrics(generatedLyrics);
+        setStatus("Your songs lyrics's are ready!")
       } catch (error) {
         console.error('Error fetching lyrics:', error.message);
+        setStatus("Failed to load lyrics.")
       } finally {
         setIsLoading(false);
       }
@@ -39,17 +42,13 @@ function LyricsPanel() {
 
       <div>
         <HeroSection
-          sectionPara={
-            isLoading
-              ? "Your songs lyric's are loading..."
-              : "Your songs lyrics's are ready!"
-          }
+          sectionPara={ status }
         />
         <div
           className="bg-white h-min-[50vh] h-[50vh]
-        m-10 rounded-3xl p-10 overflow-y-scroll"
+        m-10 rounded-3xl p-5 overflow-y-scroll"
         >
-          <div className="p-6">
+          <div className="p-3">
             <p className=" text-center">{lyrics}</p>
           </div>
         </div>
